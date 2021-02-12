@@ -9,6 +9,7 @@ export const ChangeThemeContainer = styled.button`
   padding: 0.1rem;
   cursor: pointer;
   border-radius: 5px;
+  z-index: 2;
 `;
 
 export const ChangeThemeIcon = styled(RiLightbulbFill)`
