@@ -13,9 +13,11 @@
     "polished": "^4.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-is": "^17.0.1",
     "styled-components": "^5.0.0",
-    "styled-normalize": "^8.0.7"
+    "styled-normalize": "^8.0.7",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.168",

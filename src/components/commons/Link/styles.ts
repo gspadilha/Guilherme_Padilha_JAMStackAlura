@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 export const LinkContainer = styled.a`
@@ -8,7 +9,8 @@ export const LinkContainer = styled.a`
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
-  color: #000000;
+
+  color: ${({ theme }) => get(theme, `fontColor.primary`)};
 
   img {
     display: flex;

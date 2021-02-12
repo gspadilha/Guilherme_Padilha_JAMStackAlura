@@ -1,16 +1,7 @@
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
+import { darken, lighten } from 'polished';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
-import { darken } from 'polished';
-
-export const Container = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff8e6;
-  color: #ffffff;
-`;
 
 export const Content = styled.div`
   width: 100%;
@@ -25,8 +16,9 @@ export const MeContent = styled.span`
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
-  background-color: #e9c46a;
-  color: #ffffff;
+
+  background-color: ${({ theme }) => get(theme, `primary`)};
+  color: ${({ theme }) => get(theme, `fontColor.secondary`)};
 
   padding: 0.5rem;
 
@@ -49,14 +41,20 @@ export const PagesContent = styled.nav`
   text-align: center;
   text-transform: capitalize;
   background-color: transparent;
-  color: #000000;
+
+  color: ${({ theme }) => get(theme, `fontColor.primary`)};
 
   span,
   a {
     padding: 1rem;
 
     &:hover {
-      color: ${darken(0.5, '#a8d9f2')};
+      color: ${({ theme }) => {
+        if (theme.isLight) {
+          return lighten(0.5, get(theme, `fontColor.primary`));
+        }
+        return darken(0.5, get(theme, `fontColor.primary`));
+      }};
       transition: 0.2s;
     }
   }

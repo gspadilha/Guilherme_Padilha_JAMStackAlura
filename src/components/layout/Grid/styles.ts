@@ -2,8 +2,9 @@ import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 interface IColProps {
-  value: number | any;
-  order: boolean | any;
+  value: any;
+  offset?: any;
+  order: any;
 }
 
 const Container = styled.div`
@@ -57,7 +58,11 @@ const Col = styled.div<IColProps>`
     padding: 1rem;
   }
 
-  ${({ order }: boolean | any) => {
+  ${({ order }: any) => {
+    if (typeof order === 'undefined') {
+      return css``;
+    }
+
     return breakpointsMedia({
       ...(order.xs && {
         xs: css`
@@ -72,7 +77,11 @@ const Col = styled.div<IColProps>`
     });
   }}
 
-  ${({ value }: number | any) => {
+  ${({ value }: any) => {
+    if (typeof value === 'undefined') {
+      return css``;
+    }
+
     if (typeof value === 'number') {
       return css`
         flex: 0 0 ${(100 * value) / 12}%;
@@ -112,7 +121,13 @@ const Col = styled.div<IColProps>`
         `,
       }),
     });
-  }} /*${({ offset }: number | any) => {
+  }}
+
+  ${({ offset }: any) => {
+    if (typeof offset === 'undefined') {
+      return css``;
+    }
+
     if (typeof offset === 'number') {
       return css`
         margin-left: ${(100 * offset) / 12}%;
@@ -146,7 +161,7 @@ const Col = styled.div<IColProps>`
         `,
       }),
     });
-  }}*/
+  }}
 `;
 
 export const GridSystem = {

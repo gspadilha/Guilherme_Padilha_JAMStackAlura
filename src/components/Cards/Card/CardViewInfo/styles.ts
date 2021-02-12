@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 interface CardViewInfoProps {
@@ -10,7 +11,8 @@ export const CardViewInfoContainer = styled.div<CardViewInfoProps>`
   font-style: normal;
   font-weight: normal;
   text-transform: capitalize;
-  color: #000000;
+
+  color: ${({ theme }) => get(theme, `fontColor.primary`)};
 
   ${({ isDestaque }) => {
     if (isDestaque) {

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import get from 'lodash/get';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -16,14 +17,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: #A8D9F2;
+    background: ${({ theme }) => get(theme, `secondary`)};
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #fff8e6;
+    background: ${({ theme }) => get(theme, `backgroundColor`)};
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #fff8e6;
+    background: ${({ theme }) => get(theme, `backgroundColor`)};
   }
 `;

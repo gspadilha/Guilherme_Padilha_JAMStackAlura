@@ -1,16 +1,20 @@
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
 export const Container = styled.section`
-  background: url('/images/background-capa.jpg');
+  ${({ theme }) => css`
+    background-image: url('${get(theme, `backgroundImage`)}');
+  `};
   background-size: cover;
   background-position: center;
   height: 94vh;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   > div {
     flex: 1;
@@ -21,12 +25,13 @@ export const Container = styled.section`
   }
 `;
 
-export const TextTitulo = styled.div`
+export const TextTitulo = styled.span`
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  color: #000000;
+
+  color: ${({ theme }) => get(theme, `fontColor.primary`)};
 
   ${breakpointsMedia({
     xs: css`
@@ -40,12 +45,13 @@ export const TextTitulo = styled.div`
   })}
 `;
 
-export const TextSubtitulo = styled.div`
+export const TextSubtitulo = styled.span`
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: 300;
   font-size: 3rem;
   line-height: 3.6rem;
   text-align: center;
-  color: #000000;
+
+  color: ${({ theme }) => get(theme, `fontColor.primary`)};
 `;
