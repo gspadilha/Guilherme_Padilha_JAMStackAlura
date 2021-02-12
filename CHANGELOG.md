@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/compare/v1.2.0...v1.2.1) (2021-02-12)
+
+
+### Bug Fixes
+
+* criação da pasta static para o backgroun-images funcionar ([9c6973a](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/commit/9c6973a7f39bf22cefa64c605b43a42bb18cb2c8))
+* mostrar background-image em produção ([9ca56fe](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/commit/9ca56fe020e446036c7bec62730989ded0f37863))
+
 ## [1.2.0](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/compare/v1.1.0...v1.2.0) (2021-02-12)
 
 
