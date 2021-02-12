@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
-import { darken } from 'polished';
 
 export const Container = styled.section`
   width: 100%;
@@ -51,14 +50,8 @@ export const PagesContent = styled.nav`
   background-color: transparent;
   color: #000000;
 
-  span,
-  a {
+  span {
     padding: 1rem;
-
-    &:hover {
-      color: ${darken(0.5, '#a8d9f2')};
-      transition: 0.2s;
-    }
   }
 
   ${breakpointsMedia({

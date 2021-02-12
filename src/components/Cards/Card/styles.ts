@@ -7,7 +7,16 @@ interface ICardProps {
 
 export const CardContainer = styled.div<ICardProps>`
   border: 1px solid red;
-  margin: 1rem;
+  margin: 0.5rem 0.25rem;
+  position: relative;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+  }
 
   ${({ isDestaque }) => {
     if (isDestaque) {

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -8,19 +9,21 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Fira Sans', 'Fira Sans Condensed', sans-serif;
   }
 
+  ${normalize}
+
   ::-webkit-scrollbar {
     width: 10px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #A8D9F2;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #ddd;
+    background: #fff8e6;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #ddd;
+    background: #fff8e6;
   }
 `;

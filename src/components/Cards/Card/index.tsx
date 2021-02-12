@@ -1,9 +1,10 @@
 import React from 'react';
 import CardImage from './CardImage';
-import CardText from './CardIText';
+import CardViewInfo from './CardViewInfo';
 import CardTitle from './CardITitle';
 import { CardContainer } from './styles';
 import { Box } from '../../layout/Box/styles';
+import CardDestaque from './CardDestaque';
 
 interface ICard {
   id: number;
@@ -19,18 +20,15 @@ const Card = (card: ICard) => {
   return (
     <CardContainer isDestaque={destaque}>
       <CardImage src={imagem} alt={nome} />
-      <Box
-        width={{ xs: '100%', md: destaque ? '30%' : '100%' }}
-        display="flex"
-        flexDirection="column"
-        alignItems={{ xs: 'center', md: destaque ? 'flex-start' : 'center' }}
-        justifyContent={{
-          xs: 'center',
-          md: destaque ? 'flex-start' : 'center',
-        }}
-      >
+
+      <Box width={{ xs: '100%', md: destaque ? '30%' : '100%' }}>
+        {destaque && <CardDestaque />}
+
         <CardTitle label={nome} />
-        {destaque && <CardText description={descricao} isDestaque={destaque} />}
+
+        {destaque && (
+          <CardViewInfo description={descricao} isDestaque={destaque} />
+        )}
       </Box>
     </CardContainer>
   );

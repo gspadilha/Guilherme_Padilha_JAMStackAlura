@@ -10,9 +10,12 @@ interface IBoxProps {
   flexDirection?: string | object;
   alignItems?: string | object;
   justifyContent?: string | object;
+  backgroundColor?: string | object;
   backgroundImage?: string | object;
   backgroundRepeat?: string | object;
   backgroundPosition?: string | object;
+
+  padding?: string | object;
 }
 
 export const Box = styled.div<IBoxProps>`
@@ -24,7 +27,9 @@ export const Box = styled.div<IBoxProps>`
   ${propToStyle('flexDirection')}
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
+  ${propToStyle('backgroundColor')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
+  ${propToStyle('padding')}
 `;

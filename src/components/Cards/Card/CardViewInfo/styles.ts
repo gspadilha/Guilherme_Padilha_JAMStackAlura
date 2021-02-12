@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
-interface ICardProps {
+interface CardViewInfoProps {
   isDestaque: boolean;
 }
 
-export const CardTextContainer = styled.div<ICardProps>`
+export const CardViewInfoContainer = styled.div<CardViewInfoProps>`
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: normal;

@@ -1,0 +1,14 @@
+import styled from 'styled-components';
+
+export const Container = styled.section`
+  background-color: #e9c46a;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    padding: 0.5rem 0.75rem;
+  }
+`;
