@@ -11,11 +11,14 @@ export default function App({
   Component,
   pageProps,
 }: PropsWithChildren<AppPropsType<NextRouter, {}>>) {
-  const { value, toggle } = useDarkMode(false, {
+  const { value, toggle } = useDarkMode(true, {
     storageKey: '',
     onChange: undefined,
   });
-  const themeSelected = value ? theme.colors.dark : theme.colors.light;
+
+  const { fontFamily, colors } = theme;
+  const modeSelected = value ? colors.dark : colors.light;
+  const themeSelected = { ...modeSelected, fontFamily };
 
   return (
     <>

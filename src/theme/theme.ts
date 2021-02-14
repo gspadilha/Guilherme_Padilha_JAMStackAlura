@@ -1,4 +1,8 @@
 export const theme = {
+  fontFamily: {
+    primary: 'Fira Sans',
+    secondary: 'Fira Sans Condensed',
+  },
   colors: {
     light: {
       isLight: true,

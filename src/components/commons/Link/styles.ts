@@ -3,14 +3,14 @@ import get from 'lodash/get';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 export const LinkContainer = styled.a`
-  font-family: 'Fira Sans Condensed';
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: normal;
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
 
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  color: ${({ theme }) => theme.fontColor.primary};
 
   img {
     display: flex;

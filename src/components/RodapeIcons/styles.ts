@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import get from 'lodash/get';
 
 export const Container = styled.section`
-  background-color: ${({ theme }) => get(theme, `primary`)};
+  background-color: ${({ theme }) => theme.primary};
   height: 100%;
 
   display: flex;

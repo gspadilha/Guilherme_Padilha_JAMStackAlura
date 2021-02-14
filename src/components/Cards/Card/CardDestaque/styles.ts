@@ -1,17 +1,16 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const CardDestaqueContainer = styled.span`
-  font-family: 'Fira Sans Condensed';
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: 300;
   text-transform: capitalize;
 
-  background: ${({ theme }) => get(theme, `fontColor.secondary`)};
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  background: ${({ theme }) => theme.fontColor.secondary};
+  color: ${({ theme }) => theme.fontColor.primary};
 
-  border: 1px solid ${({ theme }) => get(theme, `fontColor.primary`)};
+  border: 1px solid ${({ theme }) => theme.fontColor.primary};
   padding: 0.1rem 0.5rem;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
