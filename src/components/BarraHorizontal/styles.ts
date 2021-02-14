@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  background-color: ${({ theme }) => theme.primary};
-  height: 100%;
-
+  width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
-  a {
-    padding: 0.5rem 0.75rem;
-  }
+  background-color: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.fontColor};
 `;

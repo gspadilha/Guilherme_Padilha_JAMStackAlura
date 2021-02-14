@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
-export const Container = styled.section`
+export const Container = styled.div`
   ${({ theme }) => css`
     background-image: url('${theme.backgroundImage}');
   `};
@@ -14,17 +14,9 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  > div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
-export const TextTitulo = styled.span`
+export const TextTitulo = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: normal;
@@ -44,13 +36,22 @@ export const TextTitulo = styled.span`
   })}
 `;
 
-export const TextSubtitulo = styled.span`
+export const TextSubtitulo = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: 300;
-  font-size: 3rem;
-  line-height: 3.6rem;
   text-align: center;
 
   color: ${({ theme }) => theme.fontColor.primary};
+
+  ${breakpointsMedia({
+    xs: css`
+      font-size: 3rem;
+      line-height: 3.6rem;
+    `,
+    md: css`
+      font-size: 3rem;
+      line-height: 3.6rem;
+    `,
+  })}
 `;

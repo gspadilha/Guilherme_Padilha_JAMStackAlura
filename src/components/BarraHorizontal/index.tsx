@@ -6,8 +6,8 @@ interface ISeparadorProps {
   children?: React.ReactNode;
 }
 
-const SeparadorHorizontal = ({ children }: ISeparadorProps) => {
+const BarraHorizontal = ({ children }: ISeparadorProps) => {
   return <Container>{children}</Container>;
 };
 
-export default SeparadorHorizontal;
+export default BarraHorizontal;

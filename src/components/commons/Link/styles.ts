@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 export const LinkContainer = styled.a`

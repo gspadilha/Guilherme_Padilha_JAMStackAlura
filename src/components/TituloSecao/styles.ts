@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
-export const Container = styled.div`
+export const Container = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: normal;

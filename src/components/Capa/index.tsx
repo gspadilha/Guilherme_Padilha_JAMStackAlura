@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from '../commons/Text';
 
 import { Container, TextTitulo, TextSubtitulo } from './styles';
 
@@ -11,12 +10,8 @@ const Capa = ({ children }: ICapaProps) => {
   return (
     <Container>
       <>
-        <Text tag={'p'}>
-          <TextTitulo>GUILHERME PADILHA</TextTitulo>
-        </Text>
-        <Text tag={'p'}>
-          <TextSubtitulo>Portfólio</TextSubtitulo>
-        </Text>
+        <TextTitulo>GUILHERME PADILHA</TextTitulo>
+        <TextSubtitulo>Portfólio</TextSubtitulo>
       </>
       {children}
     </Container>

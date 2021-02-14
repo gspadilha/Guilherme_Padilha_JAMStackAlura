@@ -2,11 +2,11 @@ import React from 'react';
 import Capa from '../src/components/Capa';
 import Cabecalho from '../src/components/Cabecalho';
 import Projetos from '../src/components/Projetos';
-import SectionTitle from '../src/components/SectionTitle';
+import TituloSecao from '../src/components/TituloSecao';
 import Cards from '../src/components/Cards';
 import { Link } from '../src/components/commons/Link';
-import SeparadorHorizontal from '../src/components/SeparadorHorizontal';
-import RodapeIcons from '../src/components/RodapeIcons';
+import BarraHorizontal from '../src/components/BarraHorizontal';
+import Rodape from '../src/components/Rodape';
 
 const projetos = [
   {
@@ -44,17 +44,18 @@ const Home = () => {
   return (
     <>
       <Capa />
-      <SeparadorHorizontal>
+
+      <BarraHorizontal>
         <Cabecalho />
-      </SeparadorHorizontal>
+      </BarraHorizontal>
 
       <Projetos>
-        <SectionTitle label="MEUS PROJETOS" />
+        <TituloSecao label="MEUS PROJETOS" />
         <Cards cards={projetos} />
       </Projetos>
 
-      <SeparadorHorizontal>
-        <RodapeIcons>
+      <BarraHorizontal>
+        <Rodape>
           <Link
             label={'/icons/twitter.svg'}
             toUrl={'https://twitter.com/gspadilha_'}
@@ -66,8 +67,8 @@ const Home = () => {
             toUrl={'https://github.com/gspadilha'}
             isImage={true}
           />
-        </RodapeIcons>
-      </SeparadorHorizontal>
+        </Rodape>
+      </BarraHorizontal>
     </>
   );
 };
