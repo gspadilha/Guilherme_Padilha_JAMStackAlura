@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import get from 'lodash/get';
 import { RiLightbulbFill } from 'react-icons/ri';
 
 export const ChangeThemeContainer = styled.button`
-  background-color: ${({ theme }) => get(theme, `secondary`)};
+  background-color: ${({ theme }) => theme.secondary};
   position: fixed;
   margin: 0.5rem;
   padding: 0.1rem;
@@ -14,5 +13,5 @@ export const ChangeThemeContainer = styled.button`
 
 export const ChangeThemeIcon = styled(RiLightbulbFill)`
   font-size: 3rem;
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  color: ${({ theme }) => theme.fontColor.primary};
 `;

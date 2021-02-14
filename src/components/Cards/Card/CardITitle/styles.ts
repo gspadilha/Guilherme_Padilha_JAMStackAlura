@@ -1,15 +1,14 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const CardTitleContainer = styled.div`
-  font-family: 'Fira Sans';
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   font-style: normal;
   font-weight: normal;
   text-align: center;
   text-transform: capitalize;
 
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  color: ${({ theme }) => theme.fontColor.primary};
 
   padding: 0.75rem;
 

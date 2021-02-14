@@ -3,7 +3,7 @@ import get from 'lodash/get';
 
 export const Container = styled.section`
   ${({ theme }) => css`
-    background-image: url('${get(theme, `backgroundImageInverted`)}');
+    background-image: url('${theme.backgroundImageInverted}');
   `};
   background-size: cover;
   background-position: center;

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 interface CardViewInfoProps {
@@ -7,12 +6,12 @@ interface CardViewInfoProps {
 }
 
 export const CardViewInfoContainer = styled.div<CardViewInfoProps>`
-  font-family: 'Fira Sans Condensed';
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: normal;
   text-transform: capitalize;
 
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  color: ${({ theme }) => theme.fontColor.primary};
 
   ${({ isDestaque }) => {
     if (isDestaque) {

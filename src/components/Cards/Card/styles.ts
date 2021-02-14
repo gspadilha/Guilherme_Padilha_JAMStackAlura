@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 interface ICardProps {
@@ -7,7 +6,7 @@ interface ICardProps {
 }
 
 export const CardContainer = styled.div<ICardProps>`
-  border: 1px solid ${({ theme }) => get(theme, `primary`)};
+  border: 1px solid ${({ theme }) => theme.primary};
   border-radius: 5px;
   margin: 0.5rem -0.15rem;
   position: relative;

@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
-import get from 'lodash/get';
 
 export const Container = styled.section`
   width: 100%;
@@ -9,6 +7,6 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
 
-  background-color: ${({ theme }) => get(theme, `backgroundColor`)};
-  color: ${({ theme }) => get(theme, `fontColor`)};
+  background-color: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.fontColor};
 `;

@@ -1,15 +1,14 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
-import get from 'lodash/get';
 
 export const Container = styled.div`
-  font-family: 'Fira Sans Condensed';
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
   font-style: normal;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 
-  color: ${({ theme }) => get(theme, `fontColor.primary`)};
+  color: ${({ theme }) => theme.fontColor.primary};
 
   padding: 4rem 0;
 
