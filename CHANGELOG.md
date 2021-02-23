@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/compare/v1.3.0...v1.3.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* modificaçao na localizaçao do Head ([736d2f6](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/commit/736d2f6df7ff327c0daa1c3210021d20c396ac08))
+
 ## [1.3.0](https://github.com/gspadilha/Guilherme_Padilha_JAMStackAlura/compare/v1.2.1...v1.3.0) (2021-02-14)
 
 
